@@ -1,6 +1,6 @@
 package api_mariadb_app.backend.repository;
 
-import api_mariadb_app.backend.model.Emploee;
+import api_mariadb_app.backend.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -10,5 +10,5 @@ import org.springframework.stereotype.Repository;
 // JpaRepository extends PagingAndSortingRepository, and this extends CrudRepository
 
 @Repository
-public interface EmploeeRepository extends JpaRepository<Emploee, Long> {
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 }

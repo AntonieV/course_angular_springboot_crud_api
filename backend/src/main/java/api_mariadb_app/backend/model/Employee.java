@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity // to map model to the relational database table
 @Table(name = "employees") // to provide a table name
-public class Emploee {
+public class Employee {
 
     @Id // defines a primary key for table and
     @GeneratedValue(strategy = GenerationType.IDENTITY) // use a primary key generation strategy for that
@@ -21,11 +21,11 @@ public class Emploee {
 
     // default constructor is needed when ever created a parameters constructor because
     // hibernate internally uses proxies to create new proxies objects
-    public Emploee() {
+    public Employee() {
 
     }
 
-    public Emploee(String firstName, String lastName, String emailId) {
+    public Employee(String firstName, String lastName, String emailId) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailId = emailId;
