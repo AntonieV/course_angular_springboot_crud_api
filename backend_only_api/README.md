@@ -1,4 +1,4 @@
-#Database config:
+#Database config: 
 Add database config (url, username, password for database and hibernate properties) to backend/src/main/resources/application.properties
 Template for application.properties:
 
