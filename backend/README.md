@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=G46fjVzQ7BQ
+
 #Database config:
 Add database config (url, username, password for database and hibernate properties) to backend/src/main/resources/application.properties
 Template for application.properties:
