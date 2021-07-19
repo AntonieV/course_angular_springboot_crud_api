@@ -40,3 +40,7 @@ It is created to hold a response of the REST APIs. Add all properties that are d
 Add components with:
 
     ng g c <name of component>
+
+!!!CAVE: To make class works go to `tsconfig.json` and set
+
+    "strictPropertyInitialization": false
