@@ -31,5 +31,12 @@ Communication with REST API is done by a Service. The Service is injected to eac
 
 REST API calls are needed for GET, POST (to modify or update), PUT (to create or overwrite) and DELETE.
 
-Create a typescript class for Employee model which contains properties. 
-It is created to hold a response of the REST APIs.
+Create a typescript class for Employee model which contains properties:
+ 
+    ng g class employee
+
+It is created to hold a response of the REST APIs. Add all properties that are defined in springboot app there.
+
+Add components with:
+
+    ng g c <name of component>
