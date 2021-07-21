@@ -44,3 +44,4 @@ Add components with:
 !!!CAVE: To make class works go to `tsconfig.json` and set
 
     "strictPropertyInitialization": false
+
