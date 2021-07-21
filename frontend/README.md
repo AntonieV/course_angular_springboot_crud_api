@@ -55,7 +55,28 @@ user input, or logging directly to the console
 * to define a class as a service in Angular, use the `@Injectable()` decorator to provide the metadata
 that allows Angular to inject it into a component as a dependency.
   
-create service:
+create service to make the REST API calls:
 
     ng g s <name of the service>
 
+Add `HttpClientModul` to `app.module.ts` and import it with:
+
+    import { HttpClientModule } from "@angular/common/http";
+
+Inject `HttpClient` in `employeeshare.service.ts`.
+Define properties of the service and a method which makes a GET request on the whole `Employee[]` object:
+
+    getEmployeesList(): Observable<Employee[]> { 
+      return this.httpClient.get<Employee[]>(`${this.baseURL}`);  // backticks!
+    }
+
+In `employee-list-component.ts` inject the service in constructor. Add a private method `getEmployees`
+
+      private getEmployees() { 
+        this.employeeshareService.getEmployeesList()
+          .subscribe(data => {
+            this.employees = data;
+          });
+}
+
+and execute it in `ngOnInit()`.
