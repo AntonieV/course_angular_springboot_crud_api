@@ -45,3 +45,17 @@ Add components with:
 
     "strictPropertyInitialization": false
 
+#**Connecting Angular with list employee REST API:**
+
+**Angular Service:**
+* to share the data among various components in an Angular app
+* to make the Testing and Debugging simple
+* a component can delegate certain tasks to service, such as fetching data from the server, validating
+user input, or logging directly to the console
+* to define a class as a service in Angular, use the `@Injectable()` decorator to provide the metadata
+that allows Angular to inject it into a component as a dependency.
+  
+create service:
+
+    ng g s <name of the service>
+
