@@ -8,7 +8,7 @@ import {Employee} from "../employee";
 })
 export class EmployeeListComponent implements OnInit {
 
-  employees: Employee[];
+  employees: Employee[] | undefined;
 
   constructor() { }
 
