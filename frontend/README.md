@@ -80,3 +80,10 @@ In `employee-list-component.ts` inject the service in constructor. Add a private
 }
 
 and execute it in `ngOnInit()`.
+
+#**Add routing:**
+
+1. Add `<base href="/">` to the head of `index.html`.
+2. Create `app-routing.module.ts` and define routes there.
+3. Add AppRoutingModule to the imports-array of the `app.module.ts`.
+4. Configure a router outlet in `app.component.html`.
