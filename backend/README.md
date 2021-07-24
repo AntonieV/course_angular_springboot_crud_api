@@ -65,3 +65,49 @@ add repository interface `EmploeeRepository`.
 
 Add to exception package the `ResourceNotFoundException` class. It can be thrown if a resource not exists in the database.
 It should extends `RuntimeException`, which internally implements serializable. With ResponseStatus it returns a not found http status to the client.
+
+#**Create Requests to REST API (in controller):**
+
+Add common URL path and repository to the controller:
+
+    @CrossOrigin(origins = "http://localhost:4200")
+@RestController
+@RequestMapping("/api/v1") // defines a standard url over here, this a typically endpoint of a rest api
+public class EmployeeControler {
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @RestController
+    @RequestMapping("/api/v1") // defines a standard url over here, this a typically endpoint of a rest api
+    public class EmployeeControler {
+
+        @Autowired // to inject this repository by spring container
+        private EmployeeRepository employeeRepository;
+    }
+
+Add methods for different requests. Here are some examples for different request types like GET, PUT etc.
+
+**GET-Request:**
+
+    // get all
+    @GetMapping("/employees") // on call url "/api/v1/employees" in brwoser the api will return a list of emloyees
+    public List<Employee> getAllEmployees() {
+        return employeeRepository.findAll();
+    }
+
+Test with Postman on myworkspace -> APIs:
+
+![](src/main/resources/templates/img_postman_get_request.png)
+
+**POST-Request:**
+
+    // add a item to all items (same URL)
+    @PostMapping("/employees")  
+    public Employee createEmployee(@RequestBody Employee employee) {
+        return employeeRepository.save(employee);
+    }
+
+Test with Postman on myworkspace -> APIs:
+
+![](src/main/resources/templates/img_postman_post_request.png)
+CAVE: select `Body` -> `raw` and `JSON` (instead of `Text`), the id is not nesessary, it will be set automatically.
+
