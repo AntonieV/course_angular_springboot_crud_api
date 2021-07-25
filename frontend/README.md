@@ -129,10 +129,42 @@ for this:
 Attention: ngModel needs the import of Forms-Module in the `app.module.ts`.
 
 6. Implement the event-handler `onSubmit` in `component.ts` class and connect Angular with 
-   the add employee REST API to send form data to REST API:
+   the add employee REST API to send form data to MariaDB: See next section.
    
 
-        
+#**Connect user input with REST API to send form data to MariaDB:**
+
+1. Add method to the `employee.service.ts` which will make a REST API call and will send the data
+form from data trough REST API and REST API internally store data into MariaDB database:
+   
+          createEmployee(employee: Employee): Observable<Object> {
+            return this.httpClient.post(`${this.baseURL}`, employee)
+          }
+2. Inject the service to the constructor of the `create-employee.component.ts`.
+3. Create a method to save employee in `create-employee.component.ts` which uses the service and 
+   subscribe to him and navigate back to the employee list (see [4.]):
+   
+          saveEmployee() {
+            this.employeeshareSerivce.createEmployee(this.employee)
+            this.employeeshareSerivce.createEmployee(this.employee)
+            .subscribe(data => {
+            console.log(data);
+            this.goToEmployeeList();
+            },
+            error => console.log(error));
+            }
+4. Add router to the constructor of the `create-employee.component.ts` for navigation and implemnt
+   a method to navigate to the corresponding path / to employee list page:
+   
+          goToEmployeeList() {
+            this.router.navigate(['/employees'])
+          }
+5. In `onSubmit()` event-handler for two-way-binding add these methods:
+
+          onSubmit() {  // event-handler for ngSubmit of the form from html-template
+            console.log(this.employee);
+            this.saveEmployee();
+          }
 
 [comment]: <> (**:**)
 

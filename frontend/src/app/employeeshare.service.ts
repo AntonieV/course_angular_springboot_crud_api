@@ -14,4 +14,8 @@ export class EmployeeshareService {
   getEmployeesList(): Observable<Employee[]> { // it returns a Employee object -> an array is needed
     return this.httpClient.get<Employee[]>(`${this.baseURL}`);  // backticks!, this is a GET request (REST), it interprets the body as a JSON object
   }
+
+  createEmployee(employee: Employee): Observable<Object> {
+    return this.httpClient.post(`${this.baseURL}`, employee)
+  }
 }
