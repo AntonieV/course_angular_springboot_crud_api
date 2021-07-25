@@ -96,7 +96,7 @@ Add methods for different requests. Here are some examples for different request
 
 Test with Postman on myworkspace -> APIs:
 
-![](src/main/resources/templates/img_postman_get_request.png)
+![](../img_postman_get_request.png)
 
 **POST-Request:**
 
@@ -108,6 +108,46 @@ Test with Postman on myworkspace -> APIs:
 
 Test with Postman on myworkspace -> APIs:
 
-![](src/main/resources/templates/img_postman_post_request.png)
+![](../img_postman_post_request.png)
 CAVE: select `Body` -> `raw` and `JSON` (instead of `Text`), the id is not nesessary, it will be set automatically.
 
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)

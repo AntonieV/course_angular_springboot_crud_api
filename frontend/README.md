@@ -1,5 +1,7 @@
 https://www.youtube.com/watch?v=G46fjVzQ7BQ
 
+#**Frontend:**
+
 Integrate Bootstrap 5 css library in the angular to make the app responsive and stylish.
 1. Install the latest Bootstrap:
   
@@ -87,3 +89,48 @@ and execute it in `ngOnInit()`.
 2. Create `app-routing.module.ts` and define routes there.
 3. Add AppRoutingModule to the imports-array of the `app.module.ts`.
 4. Configure a router outlet in `app.component.html`.
+
+#**Two-Way-Binding in components:**
+
+![](../img_two_way_binding.png)
+
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
+
+[comment]: <> (**:**)
+
+[comment]: <> (![]&#40;../&#41;)
