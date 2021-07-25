@@ -94,6 +94,45 @@ and execute it in `ngOnInit()`.
 
 ![](../img_two_way_binding.png)
 
+Bindings betweeen HTML-template and component-TypeScript-class. Whenever something is changed in component, in template
+the .ts will get updated. And whenever changes in model properties of component .ts-class where done then the corresponding
+properties will get updated in html template.
+
+**Property Binding (=Data Binding):** properties are defined in component .ts-class and can be binded in html-template => interpolation.
+
+**Event Binding:** to perform some events on html template it should be bind in component .ts-class.
+
+1. Angular provides Two-Way-Binding and also provides `ngModel` directive for this. Add a new component
+for this:
+
+    ng g c create-employee
+
+2. Add path for the new component to `app-routing.module.ts`.
+
+3. Add the link to the Component in `app.component.html`
+
+4. Define a property in new component .ts-class:
+           
+        employee: Employee = new Employee();
+
+5. Add Form to html-template which uses ngSubmit for event handling and ngModel for two-way-binding:
+
+        <form (ngSubmit)="onSubmit()"> 
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" class="form-control" id="firstName"
+                   [(ngModel)]="employee.firstName"
+                   name="firstName">
+          </div>
+        </form>
+
+Attention: ngModel needs the import of Forms-Module in the `app.module.ts`.
+
+6. Implement the event-handler `onSubmit` in `component.ts` class and connect Angular with 
+   the add employee REST API to send form data to REST API:
+   
+
+        
 
 [comment]: <> (**:**)
 

@@ -5,9 +5,12 @@
           andular directive routerLinkActive-->
       <a routerLink="employees" routerLinkActive="active" class="nav-link">Employee List</a>
     </li>
+    <li class="nav-item">
+      <a routerLink="create-employee" routerLinkActive="active" class="nav-link">Add Employee</a>
+    </li>
   </ul>
 </nav>
-
+<br>
 <h1 class="text-center"> {{title}} </h1> <!--test that bootstrap successfully integrated-->
 <div class="container">
   <router-outlet></router-outlet> <!--is angular provided directive, it is used to update the templates to dynamically load component based on the url path-->
