@@ -4,7 +4,7 @@ https://www.youtube.com/watch?v=G46fjVzQ7BQ
 An Anglular 12 and Spring Boot CRUD Full Stack App. 
 
 
-**APP:**
+**APP:** 
 ![](img_app.png)
 
 **Functionalities:**
