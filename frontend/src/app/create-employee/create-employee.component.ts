@@ -35,7 +35,6 @@ export class CreateEmployeeComponent implements OnInit {
   onSubmit() {  // event-handler for ngSubmit of the form from html-template
     console.log(this.employee);
     this.saveEmployee();
-
   }
 
 }

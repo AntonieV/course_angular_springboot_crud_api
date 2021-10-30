@@ -151,7 +151,7 @@ form from data trough REST API and REST API internally store data into MariaDB d
             console.log(data);
             this.goToEmployeeList();
             },
-            error => console.log(error));
+            error => console.log(error)); 
             }
 4. Add router to the constructor of the `create-employee.component.ts` for navigation and implemnt
    a method to navigate to the corresponding path / to employee list page:
@@ -166,9 +166,36 @@ form from data trough REST API and REST API internally store data into MariaDB d
             this.saveEmployee();
           }
 
-[comment]: <> (**:**)
+**Creating Angular Update Employee Component:**
 
-[comment]: <> (![]&#40;../&#41;)
+In frontend directory create a new component:
+
+    ng g c update-employee
+
+Add component and its path with particular id from REST API to app-routing.module.ts:
+
+    {path: 'update-employee/:id'}
+
+-> Whenever this url path ist called, the update component will be rendered.
+Add update button to each employee entry in employee list, on click one of the buttons, 
+it will be navigate to update-employee page (rendered from update-employee component).
+For this add to the employee-list.component.html:
+
+      <td>
+        <button (click)="updateEmployee(employee.id)" class="btn btn-info"> Update </button>
+      </td>
+
+and to the employee-list.component.ts: 
+
+        updateEmployee(id: number | undefined) {
+            if (id !== undefined) {
+              this.router.navigate(['update-employee', id]);
+            }
+        }
+
+This will navigate to url `/update-employee/{id}`.
+
+![](../)
 
 [comment]: <> (**:**)
 

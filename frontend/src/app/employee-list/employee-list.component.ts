@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Employee} from "../employee";
 import {EmployeeshareService} from "../employeeshare.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-employee-list',
@@ -11,24 +12,11 @@ export class EmployeeListComponent implements OnInit {
 
   employees: Employee[] | undefined;
 
-  constructor(private employeeshareService: EmployeeshareService) { }
+  constructor(private employeeshareService: EmployeeshareService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.getEmployees();
-
-    // data for testing:
-    // this.employees = [{
-    //   'id': 9,
-    //   "firstName": 'Darth',
-    //   'lastName': 'Vader',
-    //   'emailId': 'd.vader@deathstar.io'
-    // },
-    // {
-    //   'id': 10,
-    //   "firstName": 'Luke',
-    //   'lastName': 'Skywalker',
-    //   'emailId': 'l.skywalker@tatooine.ti'
-    // }];
   }
 
   private getEmployees() { // it is Observable -> it is possible to subscribe to handle the response of the REST API
@@ -38,4 +26,10 @@ export class EmployeeListComponent implements OnInit {
       });
   }
 
+  // add a router navigation to route to the update employee page according to path which is defined in app-routing.module.ts
+  updateEmployee(id: number | undefined) {
+    if (id !== undefined) {
+      this.router.navigate(['update-employee', id]);
+    }
+  }
 }

@@ -1,0 +1,15 @@
+body {
+  min-height: 100%;
+}
+
+nav {
+  min-height: 50px;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+
+footer {
+  min-height: 50px;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}

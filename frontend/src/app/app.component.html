@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm bg-primary navbar-light">
+<nav class="navbar navbar-expand-sm bg-primary navbar-light fixed-top">
   <ul class="navbar-nav">
     <li class="nav-item">
       <!--angular directive routerLink to provide a navigation URL-path, to identify the active route can be used
@@ -11,12 +11,17 @@
   </ul>
 </nav>
 <br>
-<h1 class="text-center"> {{title}} </h1> <!--test that bootstrap successfully integrated-->
-<div class="container">
-  <router-outlet></router-outlet> <!--is angular provided directive, it is used to update the templates to dynamically load component based on the url path-->
+<div style="overflow-y: scroll; padding-bottom: 60px; padding-top: 60px">
+  <h1 class="text-center"> {{title}} </h1> <!--test that bootstrap successfully integrated-->
+  <div class="container">
+    <router-outlet></router-outlet> <!--is angular provided directive, it is used to update the templates to dynamically load component based on the url path-->
+  </div>
 </div>
-<footer class="footer"> <!--the footer css class is defined in global styles.css-->
+
+<footer class="footer" style="position: fixed"> <!--the footer css class is defined in global styles.css-->
   <div class = "container">
     <span>All Rights Reserved 2020 <a href="https://www.youtube.com/watch?v=G46fjVzQ7BQ">@JavaGuides</a></span>
+    <br>
+    <span class="font-monospace" style="font-size: small">Angular 10 Spring Boot CRUD Full Stack App</span>
   </div>
 </footer>

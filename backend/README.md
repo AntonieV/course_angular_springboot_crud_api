@@ -111,10 +111,54 @@ Test with Postman on myworkspace -> APIs:
 ![](../img_postman_post_request.png)
 CAVE: select `Body` -> `raw` and `JSON` (instead of `Text`), the id is not nesessary, it will be set automatically.
 
+**Creating Get Employee By Id REST API:**
 
-[comment]: <> (**:**)
+In EmployeeControler add method:
 
-[comment]: <> (![]&#40;../&#41;)
+    @GetMapping("/employees/{id}") 
+    public ResponseEntity<Employee> getEmployeeById(@PathVariable Long id) {
+        Employee employee = employeeRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id:" + id));
+        return ResponseEntity.ok(employee);
+
+restart spring boot backend app and test method with postman:
+![](../img_postman_get_employee_by_id.png)
+
+
+**Creating Update Employee REST API:**
+
+In EmployeeControler add method:
+
+        @PutMapping("/employees/{id}")    
+        public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody Employee changedEmployee) {
+        
+            Employee employee = employeeRepository.findById(id)
+                    .orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id:" + id));
+            
+            employee.setFirstName(changedEmployee.getFirstName());
+            employee.setLastName(changedEmployee.getLastName());
+            employee.setEmailId(changedEmployee.getEmailId());
+           
+            Employee updatedEmployee = employeeRepository.save(employee);
+            return ResponseEntity.ok(updatedEmployee);
+    }
+
+Restart spring boot application and test this method with postman. In header of the PUT-request add json as content type:
+![](../img_postman_header_put_request_as_json.png)
+
+And add the changed values to body JSON raw data:
+
+![](../img_postman_body_put_request.png)
+
+Execute the PUT-request:
+
+![](../img_postman_header_put_request_called.png)
+
+Check in database the result of the PUT-request:
+
+![](../db_after_update_with_put_request.png)
+
+-> in frontend create angular update employee component
 
 [comment]: <> (**:**)
 
