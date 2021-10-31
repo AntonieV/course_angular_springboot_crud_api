@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Employee} from "../employee";
 import {EmployeeshareService} from "../employeeshare.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-update-employee',
@@ -13,7 +13,9 @@ export class UpdateEmployeeComponent implements OnInit {
   id: number | undefined;
   employee: Employee = new Employee();
 
-  constructor(private employeeService: EmployeeshareService, private route: ActivatedRoute) {
+  constructor(private employeeService: EmployeeshareService,
+              private route: ActivatedRoute,
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -28,6 +30,17 @@ export class UpdateEmployeeComponent implements OnInit {
     }
   }
 
+  onSubmit() {
+    if (this.id !== undefined) {
+      this.employeeService.updateEmployee(this.id, this.employee).subscribe( data => {
+        this.goToEmployeeList();
+      }, error => console.log(error));
+    }
+  }
 
+  // to navigate to the corresponding path / to employee list page
+  goToEmployeeList() {
+    this.router.navigate(['/employees'])
+  }
 
 }

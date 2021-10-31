@@ -22,4 +22,8 @@ export class EmployeeshareService {
   getEmployeeById(id: number): Observable<Employee> {
     return this.httpClient.get<Employee>(`${this.baseURL}/${id}`);
   }
+
+  updateEmployee(id: number, updatedEmployee: Employee): Observable<Object> {
+    return this.httpClient.put(`${this.baseURL}/${id}`, updatedEmployee);
+  }
 }

@@ -218,6 +218,28 @@ Import the service to updateEmployeeComponent and get the corresponding id from 
 
 **Store updated Employee to database - Connecting Angular with update Employee REST API:**
 
+Add in employeeshare.service.ts a new REST call to save updated employee data:
+
+      updateEmployee(id: number, updatedEmployee: Employee): Observable<Object> {
+        return this.httpClient.put(`${this.baseURL}/${id}`, updatedEmployee);
+      }
+
+In update-employee.component.ts add the onSubmit method which initiate the REST call and route to employee list:
+
+      onSubmit() {
+        if (this.id !== undefined) {
+          this.employeeService.updateEmployee(this.id, this.employee).subscribe( data => {
+            this.goToEmployeeList();
+          }, error => console.log(error));
+        }
+      }      
+
+      goToEmployeeList() {
+        this.router.navigate(['/employees'])
+      }
+
+
+
 ![](../)
 
 [comment]: <> (**:**)
