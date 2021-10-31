@@ -195,15 +195,30 @@ and to the employee-list.component.ts:
 
 This will navigate to url `/update-employee/{id}`.
 
+**Connecting Angular with Get Employee REST API:**
+
+To fill up input fields of updateEmployeeComponent with data of the corresponding employee, retrive this data with a REST call on getEmployeeById().
+To populate the response of the REST API call of an specific employee with a specific id in the update employee page.
+For this add to employeeshare.service.ts: 
+
+      getEmployeeById(id: number): Observable<Employee> {
+        return this.httpClient.get<Employee>(`${this.baseURL}/${id}`);
+      }
+
+Import the service to updateEmployeeComponent and get the corresponding id from route with a snapshot of ActivatedRoute:
+
+      ngOnInit(): void {
+        this.id = this.route.snapshot.params['id']; // to get id value
+        if (this.id !== undefined) {
+          this.employeeService.getEmployeeById(this.id).subscribe(data => {
+            this.employee = data;
+          }, error => console.log(error));
+        }
+      }
+
+**Store updated Employee to database - Connecting Angular with update Employee REST API:**
+
 ![](../)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
 
 [comment]: <> (**:**)
 
