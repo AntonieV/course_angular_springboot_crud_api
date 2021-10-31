@@ -239,12 +239,9 @@ In update-employee.component.ts add the onSubmit method which initiate the REST 
       }
 
 
+**:**
 
 ![](../)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
 
 [comment]: <> (**:**)
 

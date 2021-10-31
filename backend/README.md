@@ -160,6 +160,23 @@ Check in database the result of the PUT-request:
 
 -> in frontend create angular update employee component
 
+
+**Creating Delete Employee REST API:**
+
+In EmployeeControler:
+
+        @DeleteMapping("/employees/{id}")
+        public ResponseEntity<Map<String, Boolean>> deleteEmployee(@PathVariable Long id) {
+            Employee employee = employeeRepository.findById(id)
+                  .orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id:" + id));
+            employeeRepository.delete(employee);
+            Map<String, Boolean> response = new HashMap<>();
+            response.put("Employee with ID " + id + " was successfully deleted!", Boolean.TRUE);
+            return ResponseEntity.ok(response);
+    }
+
+![](../img_postman_delete_employee_request.png)
+
 [comment]: <> (**:**)
 
 [comment]: <> (![]&#40;../&#41;)
