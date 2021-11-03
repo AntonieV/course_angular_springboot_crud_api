@@ -32,4 +32,13 @@ export class EmployeeListComponent implements OnInit {
       this.router.navigate(['update-employee', id]);
     }
   }
+
+  deleteEmployee(id: number | undefined) {
+    if (id !== undefined) {
+      this.employeeshareService.deleteEmployee(id).subscribe( data => {
+        console.log(data);
+        this.getEmployees();
+      });
+    }
+  }
 }

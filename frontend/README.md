@@ -239,13 +239,31 @@ In update-employee.component.ts add the onSubmit method which initiate the REST 
       }
 
 
-**:**
+**Connecting Angular with Delete Employee REST API:**
+
+Add the delete button to the employee-list.component.html:
+
+    <button (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left: 10px"> Delete </button>
+
+and implement the `deleteEmployee()` method in employee-list.component.ts:
+
+      deleteEmployee(id: number | undefined) {
+        if (id !== undefined) {
+          this.employeeshareService.deleteEmployee(id).subscribe( data => {
+            this.getEmployees();
+          });
+        }
+      }
+
+Add the delete REST call to the employeeshare.service.ts:
+
+      deleteEmployee(id: number): Observable<Object> {
+        return this.httpClient.delete(`${this.baseURL}/${id}`);
+      }
+
+**Createing View Employee Details Functionality:**
 
 ![](../)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
 
 [comment]: <> (**:**)
 
