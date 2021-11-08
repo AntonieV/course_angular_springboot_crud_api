@@ -1,8 +1,21 @@
-https://www.youtube.com/watch?v=G46fjVzQ7BQ
+# Java-Guides-Course: Angular Spring-Boot Application with MariaDB Crud API and REST requests (@RameshMF)
+***An Anglular 12 and Spring Boot CRUD Full Stack App.***
 
-#**Course Angular Spring-Boot Application with MariaDB Crud API and REST requests:**
-An Anglular 12 and Spring Boot CRUD Full Stack App. 
 
+Sources:
+
+* https://www.youtube.com/watch?v=G46fjVzQ7BQ
+
+* https://github.com/RameshMF/Angular-10-Spring-Boot-CRUD-Full-Stack-App
+
+
+**Personal notes frontend:**
+
+https://github.com/AntonieV/course_angular_springboot_crud_api/blob/main/frontend/README.md
+
+**Personal notes backend:**
+
+https://github.com/AntonieV/course_angular_springboot_crud_api/blob/main/backend/README.md
 
 **APP:** 
 ![](img_app.png)
