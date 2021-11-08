@@ -94,7 +94,7 @@ and execute it in `ngOnInit()`.
 
 #**Two-Way-Binding in components:**
 
-![](../img_two_way_binding.png)
+![](../assets/img_two_way_binding.png)
 
 Bindings betweeen HTML-template and component-TypeScript-class. Whenever something is changed in component, in template
 the .ts will get updated. And whenever changes in model properties of component .ts-class where done then the corresponding
@@ -310,28 +310,3 @@ inject the employeeshare.service in employee-details.component and call this met
     }
 
 Implement html-code for the employee-details view in employee-details.html.
-
-
-
-
-![](../)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)

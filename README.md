@@ -11,72 +11,25 @@ Sources:
 
 **Personal notes frontend:**
 
-https://github.com/AntonieV/course_angular_springboot_crud_api/blob/main/frontend/README.md
+<a href="./frontend/README.md" target="_top">README Frontend</a>
 
 **Personal notes backend:**
 
-https://github.com/AntonieV/course_angular_springboot_crud_api/blob/main/backend/README.md
-
-**APP:** 
-![](img_app.png)
-
-**Functionalities:**
-![](img_functionalities.png)
-
-**Architecture:**
-![](img_architecture.png)
-
-**Backend-side (Server-side) Technologies:**
-![](img_technologies_backend.png)
-
-**Frontend-side Technolgoies:**
-![](img_technologies_frontend.png)
-
-#**Details Frontend:**
-
-<a href="./frontend/README.md" target="_top">README Frontend</a>
-
-#**Details Backend:**
-
 <a href="./backend/README.md" target="_top">README Backend</a>
 
-[comment]: <> (**:**)
+**APP:** 
+![](assets/img_app.png)
 
-[comment]: <> (![]&#40;../&#41;)
+**Functionalities:**
+![](assets/img_functionalities.png)
 
-[comment]: <> (**:**)
+**Architecture:**
+![](assets/img_architecture.png)
 
-[comment]: <> (![]&#40;../&#41;)
+**Backend-side (Server-side) Technologies:**
+![](assets/img_technologies_backend.png)
 
-[comment]: <> (**:**)
+**Frontend-side Technolgoies:**
+![](assets/img_technologies_frontend.png)
 
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
 

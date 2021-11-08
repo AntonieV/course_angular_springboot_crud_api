@@ -98,7 +98,7 @@ Add methods for different requests. Here are some examples for different request
 
 Test with Postman on myworkspace -> APIs:
 
-![](../img_postman_get_request.png)
+![](../assets/img_postman_get_request.png)
 
 **POST-Request:**
 
@@ -110,7 +110,7 @@ Test with Postman on myworkspace -> APIs:
 
 Test with Postman on myworkspace -> APIs:
 
-![](../img_postman_post_request.png)
+![](../assets/img_postman_post_request.png)
 CAVE: select `Body` -> `raw` and `JSON` (instead of `Text`), the id is not nesessary, it will be set automatically.
 
 **Creating Get Employee By Id REST API:**
@@ -124,7 +124,7 @@ In EmployeeControler add method:
         return ResponseEntity.ok(employee);
 
 restart spring boot backend app and test method with postman:
-![](../img_postman_get_employee_by_id.png)
+![](../assets/img_postman_get_employee_by_id.png)
 
 
 **Creating Update Employee REST API:**
@@ -146,26 +146,26 @@ In EmployeeControler add method:
     }
 
 Restart spring boot application and test this method with postman. In header of the PUT-request add json as content type:
-![](../img_postman_header_put_request_as_json.png)
+![](../assets/img_postman_header_put_request_as_json.png)
 
 And add the changed values to body JSON raw data:
 
-![](../img_postman_body_put_request.png)
+![](../assets/img_postman_body_put_request.png)
 
 Execute the PUT-request:
 
-![](../img_postman_header_put_request_called.png)
+![](../assets/img_postman_header_put_request_called.png)
 
 Check in database the result of the PUT-request:
 
-![](../db_after_update_with_put_request.png)
+![](../assets/db_update_put_request.png)
 
 -> in frontend create angular update employee component
 
 
 **Creating Delete Employee REST API:**
 
-In EmployeeControler:
+In EmployeeController:
 
         @DeleteMapping("/employees/{id}")
         public ResponseEntity<Map<String, Boolean>> deleteEmployee(@PathVariable Long id) {
@@ -175,42 +175,6 @@ In EmployeeControler:
             Map<String, Boolean> response = new HashMap<>();
             response.put("Employee with ID " + id + " was successfully deleted!", Boolean.TRUE);
             return ResponseEntity.ok(response);
-    }
+        }
 
-![](../img_postman_delete_employee_request.png)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
-
-[comment]: <> (**:**)
-
-[comment]: <> (![]&#40;../&#41;)
+![](../assets/img_postman_delete_employee_request.png)
