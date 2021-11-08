@@ -267,6 +267,49 @@ Add a new employee-details component with the command (in /frontend folder):
 
     ng g c employee-details
 
+Configure route for employee-details in app-routing.module.ts:
+
+    {path: 'employee-details/:id', component: EmployeeDetailsComponent}
+
+Create a button and click-handler in employee-list-component to navigate to EmployeeDetailsComponent:
+
+    <button (click)="employeeDetails(employee.id)" class="btn btn-outline-primary" style="margin-left: 10px"> View </button>
+    employeeDetails(id: number | undefined) {
+        this.router.navigate(['employee-details', id]);
+    }
+
+In employee-details.component.ts use activated Route to get the id from the Route (injection into component via constructor).
+    
+    id: number;
+    employee: Employee;
+
+    constructor(private route: ActivatedRoute) { }
+
+    ngOnInit(): void {
+        this.id = this.route.snapshot.params['id'];
+    }
+
+Use the getEmployeeById-method from employeeshare.service.ts to get the employee data from a specific id. For this
+inject the employeeshare.service in employee-details.component and call this method:
+
+    id: number | undefined;
+    employee: Employee | undefined;
+
+    constructor(private route: ActivatedRoute, private employeeService: EmployeeshareService) { }
+
+    ngOnInit(): void {
+        this.id = this.route.snapshot.params['id'];
+        if (this.id !== undefined && this.employee !== undefined) {
+            this.employee = new Employee();           
+            this.employeeService.getEmployeeById(this.id).subscribe(data => {
+                this.employee = data;
+            });
+        }
+    }
+
+Implement html-code for the employee-details view in employee-details.html.
+
+
 ![](../)
 
 [comment]: <> (**:**)

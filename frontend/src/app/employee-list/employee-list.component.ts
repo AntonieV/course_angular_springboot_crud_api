@@ -41,4 +41,9 @@ export class EmployeeListComponent implements OnInit {
       });
     }
   }
+
+  employeeDetails(id: number | undefined) {
+    // route name which is defined in app-routing.module.ts
+    this.router.navigate(['employee-details', id]);
+  }
 }
