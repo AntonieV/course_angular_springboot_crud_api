@@ -310,6 +310,8 @@ inject the employeeshare.service in employee-details.component and call this met
 Implement html-code for the employee-details view in employee-details.html.
 
 
+
+
 ![](../)
 
 [comment]: <> (**:**)
