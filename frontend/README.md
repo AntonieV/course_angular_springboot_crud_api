@@ -261,7 +261,11 @@ Add the delete REST call to the employeeshare.service.ts:
         return this.httpClient.delete(`${this.baseURL}/${id}`);
       }
 
-**Createing View Employee Details Functionality:**
+**Creating View Employee Details Functionality:**
+
+Add a new employee-details component with the command (in /frontend folder):
+
+    ng g c employee-details
 
 ![](../)
 
