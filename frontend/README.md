@@ -2,7 +2,7 @@
 
 https://www.youtube.com/watch?v=G46fjVzQ7BQ
 
-#**Frontend:**
+# **Frontend:**
 
 Integrate Bootstrap 5 css library in the angular to make the app responsive and stylish.
 1. Install the latest Bootstrap:
@@ -49,7 +49,7 @@ Add components with:
 
     "strictPropertyInitialization": false
 
-#**Connecting Angular with list employee REST API:**
+# **Connecting Angular with list employee REST API:**
 
 **Angular Service:**
 * to share the data among various components in an Angular app
@@ -85,14 +85,14 @@ In `employee-list-component.ts` inject the service in constructor. Add a private
 
 and execute it in `ngOnInit()`.
 
-#**Add routing:**
+# **Add routing:**
 
 1. Add `<base href="/">` to the head of `index.html`.
 2. Create `app-routing.module.ts` and define routes there.
 3. Add AppRoutingModule to the imports-array of the `app.module.ts`.
 4. Configure a router outlet in `app.component.html`.
 
-#**Two-Way-Binding in components:**
+# **Two-Way-Binding in components:**
 
 ![](../assets/img_two_way_binding.png)
 
@@ -134,7 +134,7 @@ Attention: ngModel needs the import of Forms-Module in the `app.module.ts`.
    the add employee REST API to send form data to MariaDB: See next section.
    
 
-#**Connect user input with REST API to send form data to MariaDB:**
+# **Connect user input with REST API to send form data to MariaDB:**
 
 1. Add method to the `employee.service.ts` which will make a REST API call and will send the data
 form from data trough REST API and REST API internally store data into MariaDB database:
