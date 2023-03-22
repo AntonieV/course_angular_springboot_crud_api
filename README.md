@@ -1,4 +1,4 @@
-# Implementation and notes made by learning Java-Guides-Course: Angular Spring-Boot Application with MariaDB Crud API and REST requests (@RameshMF)
+# Implementation and some notes made by learning Java-Guides-Course: Angular Spring-Boot Application with MariaDB Crud API and REST requests (@RameshMF)
 ***An Anglular 12 and Spring Boot CRUD Full Stack App.***
 
 
